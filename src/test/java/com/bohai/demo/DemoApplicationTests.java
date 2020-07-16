@@ -65,6 +65,7 @@ public class DemoApplicationTests {
         final List<User> body = response2.getBody();
 
         log.info("[查询所有] - [{}]\n",body);
+        log.info("select * from user where id= 11");
         Long userId = body.get(0).getId();
         ResponseEntity<User> response3 = template.getForEntity("http://localhost:9090/users/{id}", User.class, userId);
         log.info("[主键查询] - [{}]\n",response3.getBody());
