@@ -1,10 +1,12 @@
 package com.bohai.demo;
 
+import com.battcn.swagger.annotation.EnableSwagger2Doc;
 import org.apache.catalina.core.ApplicationContext;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@EnableSwagger2Doc
 @SpringBootApplication
 public class DemoApplication {
 

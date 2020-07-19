@@ -1,31 +1,27 @@
 package com.bohai.demo.entity;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.apache.ibatis.type.Alias;
+import org.springframework.data.annotation.Id;
 
-import java.io.Serializable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
-@ApiModel
-public class User implements Serializable {
+public class TUser {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ApiModelProperty("用户名")
     private String username;
-    @ApiModelProperty("密码")
     private String password;
-
-    public User() {
+    public TUser() {
         super();
     }
 
-    public User(String username, String password) {
+    public TUser(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    public User(Long id, String username, String password) {
+    public TUser(Long id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
