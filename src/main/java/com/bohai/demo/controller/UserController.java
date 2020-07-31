@@ -45,10 +45,11 @@ public class UserController {
     public void delete(@PathVariable Long id){
         log.info("单个参数用 ");
     }
+
     @PostMapping
     @ApiOperation(value = "添加用户 （DONE）")
     public User post(@RequestBody User user){
-        log.info("如果是POST PUT 这种带RequestBody 的可以不用写 @ApiImplicitParam");
+        log.info("如果是POST PUT 这种带 RequestBody 的可以不用写 @ApiImplicitParam");
         return user;
     }
 
